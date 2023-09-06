@@ -1,5 +1,5 @@
 import { VStack, Text, ScrollView, FlatList, HStack } from "native-base";
-import SecondaryFlatList from "../../components/secondary-flatList";
+import SecondaryFlatList from "../../components/Secondary-flatList";
 import { useState } from "react";
 
 function Collections() {
@@ -95,7 +95,7 @@ function Collections() {
               pb={2}
               showsHorizontalScrollIndicator={false}
               horizontal
-              data={books.filter((book) => book.category === category)}
+              data={filteredBook}
               renderItem={({ item }) => (
                 <HStack request={item}>
                   <SecondaryFlatList
@@ -103,7 +103,6 @@ function Collections() {
                     books={filteredBook[item]}
                     onRequest={() => handleFilterBooks(item)}
                   />
-                  <Text color={"gray.700"}>{item}</Text>
                 </HStack>
               )}
             />
@@ -114,7 +113,7 @@ function Collections() {
             pb={2}
             showsHorizontalScrollIndicator={false}
             horizontal
-            data={categories}
+            data={filteredBook}
             renderItem={({ item }) => (
               <HStack request={item}>
                 <SecondaryFlatList
@@ -122,7 +121,6 @@ function Collections() {
                   books={filteredBook[item]}
                   onRequest={() => handleFilterBooks(item)}
                 />
-                <Text color={"gray.700"}>{item}</Text>
               </HStack>
             )}
           /> */}
