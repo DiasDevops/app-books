@@ -60,7 +60,7 @@ function SecondaryFlatList({ title, ...rest }) {
   return (
     <VStack>
       <HStack justifyContent={"space-between"}>
-        <VStack>
+        <VStack mb={4}>
           <Text fontSize={"2xl"} fontWeight={"bold"}>
             {title}
           </Text>
@@ -84,7 +84,7 @@ function SecondaryFlatList({ title, ...rest }) {
         horizontal
         data={Favorites}
         renderItem={({ item }) => (
-          <VStack pt={4} pr={2}>
+          <VStack pr={2}>
             <Image
               request={item}
               h={"125"}
@@ -92,6 +92,7 @@ function SecondaryFlatList({ title, ...rest }) {
               roundedRight={6}
               source={item.cover}
               onPress={() => handleOpenDetails(item.id)}
+              alt={item.id}
             />
           </VStack>
         )}
