@@ -2,50 +2,9 @@ import { VStack, HStack, Text, FlatList, Icon, Image } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useState } from "react";
 
-function SecondaryFlatList({ title, ...rest }) {
+function SecondaryFlatList({ title, books, ...rest }) {
   const [Favorites, setFavorites] = useState([]);
-  const [books, setBooks] = useState([
-    {
-      id: "1",
-      cover: require("../assets/images/books/the-wager-a-tale-of-shipwreck.png"),
-      isFavorite: true,
-    },
-    {
-      id: "2",
-      cover: require("../assets/images/books/killers-of-the-flower-moon.png"),
-      isFavorite: true,
-    },
-    {
-      id: "3",
-      cover: require("../assets/images/books/jaws-a-novel.png"),
-      isFavorite: true,
-    },
-    {
-      id: "4",
-      cover: require("../assets/images/books/the-invisible-man.png"),
-      isFavorite: true,
-    },
-    {
-      id: "5",
-      cover: require("../assets/images/books/the-wager-a-tale-of-shipwreck.png"),
-      isFavorite: true,
-    },
-    {
-      id: "6",
-      cover: require("../assets/images/books/killers-of-the-flower-moon.png"),
-      isFavorite: true,
-    },
-    {
-      id: "7",
-      cover: require("../assets/images/books/jaws-a-novel.png"),
-      isFavorite: true,
-    },
-    {
-      id: "8",
-      cover: require("../assets/images/books/the-invisible-man.png"),
-      isFavorite: true,
-    },
-  ]);
+
   useState(() => {
     handleListBooks();
   }, []);

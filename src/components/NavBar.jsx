@@ -6,7 +6,7 @@ function NavBar() {
     <VStack position={"absolute"} bottom={0} left={0} right={0}>
       <HStack
         justifyContent={"space-between"}
-        borderColor={"gray.200"}
+        borderColor={"gray.100"}
         borderWidth={1}
         rounded={12}
         m={2}
