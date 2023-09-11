@@ -11,6 +11,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 import SecondaryFlatList from "../../components/Secondary-flatList";
 import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { collectionsKey } from "../../constant/keys";
 
 function Collections() {
   const [categories, setCategories] = useState([]);
@@ -166,17 +167,22 @@ function Collections() {
     },
   ]);
 
-  const collectionsData = async (value) => {
-    try {
-      await AsyncStorage.setItem("@collectionsKey", JSON.stringify[]);
-    } catch (e) {
-      console.log("Error");
-    }
-  };
-
   useEffect(() => {
     handleReduceCategories();
+    AsyncStorage.getItem(collectionsKey).then((result) => {
+      const storageParsed = result ? JSON.parse(result) : [];
+      setBooks(storageParsed);
+    });
   }, []);
+
+  // useFocusEffect(
+  //   useCallback(async () => {
+  //     const storage = await AsyncStorage.getItem(collectionsKey);
+  //     const storageParsed = storage ? JSON.parse(result) : [];
+  //     setBooks(storageParsed);
+  //     return;
+  //   })
+  // );
 
   function handleReduceCategories() {
     const listCategories = Array.from(

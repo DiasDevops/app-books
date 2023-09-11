@@ -1,0 +1,148 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "First Test",
+      "author": "",
+      "synopsis": "",
+      "category": "Ação",
+      "cover": "require('../../assets/images/books/first-test.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "title": "Naomis Room",
+      "author": "",
+      "synopsis": "",
+      "category": "Terror",
+      "cover": "require('../../assets/images/books/naomis-room.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "title": "A Promise Of Fire",
+      "author": "",
+      "synopsis": "",
+      "category": "Romance",
+      "cover": "require('../../assets/images/books/a-promise-of-fire.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "title": "Daughter Of No Worlds",
+      "author": "",
+      "synopsis": "",
+      "category": "Romance",
+      "cover": "require('../../assets/images/books/daughter-of-no-worlds.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "title": "The Cursed And Desired",
+      "author": "",
+      "synopsis": "",
+      "category": "Romance",
+      "cover": "require('../../assets/images/books/the-cursed-and-desired.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "title": "The Invisible Man",
+      "author": "",
+      "synopsis": "",
+      "category": "Romance",
+      "cover": "require('../../assets/images/books/the-invisible-man.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "title": "The Wager A Tale Of Shipwreck",
+      "author": "",
+      "synopsis": "",
+      "category": "Ação",
+      "cover": "require('../../assets/images/books/the-wager-a-tale-of-shipwreck.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "title": "Tales Of Horror",
+      "author": "",
+      "synopsis": "",
+      "category": "Terror",
+      "cover": "require('../../assets/images/books/tales-of-horror.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "title": "Ghost Eaters",
+      "author": "",
+      "synopsis": "",
+      "category": "Terror",
+      "cover": "require('../../assets/images/books/ghost-eaters.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "title": "Solo Leveling",
+      "author": "Chugong",
+      "synopsis": "Um fraco caçador de E-Rank, Sung Jin Woo. Ele quase encontra seu fim em uma masmorra, mas havia um lado bom no momento mais difícil!",
+      "category": "Manhwa",
+      "cover": "require('../../assets/images/books/solo-leveling.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "title": "The Beginning After The End",
+      "author": "TurtleMe (Brandon Lee)",
+      "synopsis": "Segue a vida do falecido Rei Grey após sua morte prematura e misteriosa.",
+      "category": "Manhwa",
+      "cover": "require('../../assets/images/books/the-beginning-after-the-end.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "title": "The Novel’s Extra",
+      "author": "Jee Gab Song (지갑송)",
+      "synopsis": "Um mundo que ele mesmo criou e uma história que escreveu, mas nunca terminou. Ele se tornou o figurante de seu romance, um personagem sem importância para a história.",
+      "category": "Manhwa",
+      "cover": "require('../../assets/images/books/the-novels-extra.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "title": "The World After the End",
+      "author": "",
+      "synopsis": "Esta é uma história de um homem que se recusou a voltar ao passado quando todos os outros decidiram fazê-lo.",
+      "category": "Manhwa",
+      "cover": "require('../../assets/images/books/the-world-after-the-end.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "title": "My Daughter Is the Final Boss",
+      "author": "Geulsseunya",
+      "synopsis": "Minha filha destruiu o mundo. No final da encruzilhada, morri desamparado. Quando abri os olhos novamente, vi minha filha de cinco anos na minha frente. Evite os cinco infortúnios de Seol-Ah Lee. (0/5) Chance dada mais uma vez. Se criada incorretamente, o mundo perecerá.",
+      "category": "Manhwa",
+      "cover": "require('../../assets/images/books/my-daughter-is-the-final-boss.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "title": "Jack Mars Primary Threat",
+      "author": "",
+      "synopsis": "",
+      "category": "Ação",
+      "cover": "require('../../assets/images/books/jack-mars-primary-threat.png')",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "title": "Man Hunt",
+      "author": "",
+      "synopsis": "",
+      "category": "Ação",
+      "cover": "require('../../assets/images/books/man-hunt.png')",
+      "isFavorite": false
+    }
+  ]
+}
