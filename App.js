@@ -10,6 +10,8 @@ import {
   Lato_700Bold,
 } from "@expo-google-fonts/lato";
 import NavBar from "./src/components/NavBar";
+import BookDetails from "./src/screens/Details";
+import { Router } from "./src/routes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -20,8 +22,7 @@ export default function App() {
   return (
     <NativeBaseProvider theme={THEME}>
       <StatusBar translucent style="dark" />
-      {fontsLoaded ? <Collections /> : console.log("Erro ao carregar Font")}
-      <NavBar />
+      {fontsLoaded ? <Router /> : console.log("Erro ao carregar Font")}
     </NativeBaseProvider>
   );
 }

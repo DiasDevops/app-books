@@ -9,7 +9,8 @@ import {
 } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import SecondaryFlatList from "../../components/Secondary-flatList";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 function Collections() {
   const [categories, setCategories] = useState([]);
@@ -165,7 +166,15 @@ function Collections() {
     },
   ]);
 
-  useState(() => {
+  const collectionsData = async (value) => {
+    try {
+      await AsyncStorage.setItem("@collectionsKey", JSON.stringify[]);
+    } catch (e) {
+      console.log("Error");
+    }
+  };
+
+  useEffect(() => {
     handleReduceCategories();
   }, []);
 
@@ -178,6 +187,7 @@ function Collections() {
         return categories;
       }, new Set())
     );
+    listCategories.sort();
     setCategories(listCategories);
   }
 
