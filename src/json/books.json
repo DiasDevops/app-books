@@ -6,7 +6,7 @@
       "author": "",
       "synopsis": "",
       "category": "Ação",
-      "cover": "require('../../assets/images/books/first-test.png')",
+      "cover": "first-test.png",
       "isFavorite": false
     },
     {

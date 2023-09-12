@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { Home } from "../screens/Home";
+import Home from "../screens/Home";
 import Collections from "../screens/Collections";
 import Config from "../screens/Config";
 
