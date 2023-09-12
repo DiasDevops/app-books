@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { VStack, Text, Image, FlatList } from "native-base";
+import { VStack, Text, Image, FlatList, ScrollView } from "native-base";
 import axios from "axios";
+import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity } from "react-native";
+import BookCard from "../../components/BookCard";
 
 function Home() {
   const [books, setBooks] = useState([]);
+
+  function textLimit(text, limit) {
+    if (text.length > limit) {
+      return text.slice(0, limit) + "...";
+    }
+    return text;
+  }
 
   useEffect(() => {
     axios
@@ -16,28 +26,80 @@ function Home() {
       });
   }, []);
 
-  const renderItem = ({ item }) => (
-    <VStack style={{ marginBottom: 20 }}>
-      <Image
-        alt={item.id}
-        source={require(`../assets/images/books/${item.cover}`)}
-        style={{ width: 100, height: 150 }}
-      />
-      <Text>{item.title}</Text>
-      <Text>Autor: {item.author !== "" ? item.author : "Desconhecido"}</Text>
-      <Text>Categoria: {item.category}</Text>
-      <Text>Sinopse: {item.synopsis}</Text>
-    </VStack>
-  );
+  // const renderItem = ({ item }) => (
+  //   <VStack pr={4}>
+  //     <TouchableOpacity
+  //       onPress={() => navigation.navigate("details", { book: item })}
+  //     >
+  //       <Image
+  //         request={item}
+  //         alt={item.id}
+  //         source={{
+  //           uri: item.cover,
+  //         }}
+  //         bgColor={"gray.800"}
+  //         roundedRight={6}
+  //         w={"140"}
+  //         height={"210"}
+  //       />
+  //     </TouchableOpacity>
+  //     <Text fontSize={"md"} fontWeight={"bold"}>
+  //       {" "}
+  //       {item.title === ""
+  //         ? textLimit("Titulo Indisponivel", 15)
+  //         : textLimit(item.title, 15)}
+  //     </Text>
+  //     <Text>
+  //       {" "}
+  //       {item.author === ""
+  //         ? textLimit("Desconhecido", 18)
+  //         : textLimit(item.author, 18)}
+  //     </Text>
+  //   </VStack>
+  // );
 
   return (
-    <VStack safeArea>
-      <Text>Lista de Livros:</Text>
-      <FlatList
-        data={books}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()} // Certifique-se de que o ID seja uma string
-      />
+    <VStack safeArea px={2}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Text fontSize={"4xl"} fontWeight={"bold"} pb={6}>
+          Populares
+        </Text>
+        <FlatList
+          borderBottomColor={"gray.100"}
+          borderBottomWidth={2}
+          pb={2}
+          showsHorizontalScrollIndicator={false}
+          horizontal
+          data={books}
+          renderItem={({ item }) => <BookCard item={item} />}
+          keyExtractor={(item) => item.id.toString()}
+        />
+        <Text fontSize={"4xl"} fontWeight={"bold"} pb={6}>
+          Populares
+        </Text>
+        <FlatList
+          numColumns={3}
+          columnWrapperStyle={{
+            flex: 1,
+            justifyContent: "space-between",
+          }}
+          borderBottomColor={"gray.100"}
+          borderBottomWidth={2}
+          pb={2}
+          showsVerticalScrollIndicator={false}
+          data={books}
+          renderItem={({ item }) => (
+            <BookCard
+              item={item}
+              sizeX={"115"}
+              sizeY={"160"}
+              titleLimit={10}
+              authorLimit={12}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
+      </ScrollView>
     </VStack>
   );
 }

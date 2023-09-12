@@ -1,31 +1,98 @@
-import React, { useState } from "react";
-import { VStack, Text, Image, Button } from "native-base";
+import React, { useEffect, useState } from "react";
+import { VStack, Text, Image, Button, Icon, HStack } from "native-base";
+import { useRoute } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
+import axios from "axios";
 
-const BookDetails = ({ route }) => {
-  //   const { titulo, autor, capa, sinopse } = route.params;
-  const [isFavorite, setIsFavorite] = useState(false);
+const BookDetails = () => {
+  const route = useRoute();
+  const { book } = route.params;
+  const [favorite, setFavorite] = useState(book.isFavorite);
 
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
+  const loadFavotires = async () => {
+    axios
+      .get(`http://10.0.2.2:3004/books/${book.id}`)
+      .then((response) => {
+        setFavorite(response.data.isFavorite);
+      })
+      .catch((error) => {
+        console.error("Erro ao obter os dados:", error);
+      });
   };
 
+  const handleFavorite = async () => {
+    const updateBook = !favorite;
+    setFavorite(updateBook);
+
+    try {
+      await axios.patch(`http://10.0.2.2:3004/books/${book.id}`, {
+        isFavorite: updateBook,
+      });
+      setFavorite(!favorite);
+    } catch (error) {
+      console.error("Erro ao atualizar favorito:", error);
+    }
+  };
+
+  useEffect(() => {
+    loadFavotires();
+  }, []);
+
+  // const handleFavorite = async () => {
+  //   const updateBook = !favorite;
+  //   setFavorite(updateBook);
+  //   book.isFavorite = updateBook;
+  // };
+
   return (
-    <VStack flex={1} alignItems={"center"} justifyContent={"center"}>
-      {/* <Image source={{ uri: capa }} w={200} h={300} mb={16} resizeMode="cover"/> */}
-      <Text fontSize={"md"} fontWeight={"bold"} mb={8}>
-        AAAAA
-      </Text>
-      <Text fontSize={"sm"} mb={8}>
-        Autor: AAAAAA
-      </Text>
-      <Text font={"sm"} textAlign={"center"} py={"16"} pb={16}>
-        AAAA
-      </Text>
-      <Button
-        title={isFavorite ? "Desfavoritar" : "Favoritar"}
-        onPress={toggleFavorite}
-      />
-    </VStack>
+    <>
+      <VStack safeArea>
+        <Text fontSize={"4xl"} fontWeight={"bold"}>
+          Detalhes
+        </Text>
+      </VStack>
+      <VStack justifyContent={"center"} flex={1}>
+        <VStack alignItems={"center"}>
+          <Image
+            source={{ uri: book.cover }}
+            w={175}
+            h={275}
+            mb={4}
+            roundedRight={8}
+            resizeMode="cover"
+          />
+          <HStack alignItems={"center"}>
+            <Text fontSize={"2xl"} fontWeight={"bold"}>
+              {book.title}
+            </Text>
+
+            <TouchableOpacity onPress={() => handleFavorite(book.id)}>
+              <Icon
+                as={
+                  <Ionicons name={favorite ? "bookmark" : "bookmark-outline"} />
+                }
+                size={6}
+                color={favorite ? "secondary.700" : "gray.300"}
+              />
+            </TouchableOpacity>
+          </HStack>
+
+          <Text fontSize={"md"}>
+            Autor: {book.author != "" ? book.author : "Desconhecido"}
+          </Text>
+          <Text fontSize={"md"} textAlign={"center"}>
+            {book.category}
+          </Text>
+          <Text fontSize={"md"} textAlign={"center"}>
+            {book.synopsis != ""
+              ? book.synopsis
+              : "Nenhuma Informação disponível"}
+          </Text>
+          <Button>Leitura</Button>
+        </VStack>
+      </VStack>
+    </>
   );
 };
 

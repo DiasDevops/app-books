@@ -3,10 +3,10 @@
     {
       "id": "1",
       "title": "First Test",
-      "author": "",
+      "author": "Tamora Pierce",
       "synopsis": "",
       "category": "Ação",
-      "cover": "first-test.png",
+      "cover": "https://m.media-amazon.com/images/I/91WovGmnQYL._SY466_.jpg",
       "isFavorite": false
     },
     {
@@ -15,70 +15,70 @@
       "author": "",
       "synopsis": "",
       "category": "Terror",
-      "cover": "require('../../assets/images/books/naomis-room.png')",
-      "isFavorite": false
+      "cover": "https://m.media-amazon.com/images/I/81to22-yTGL._SY342_.jpg",
+      "isFavorite": true
     },
     {
       "id": "3",
       "title": "A Promise Of Fire",
-      "author": "",
+      "author": "Amanda Bouchet",
       "synopsis": "",
       "category": "Romance",
-      "cover": "require('../../assets/images/books/a-promise-of-fire.png')",
-      "isFavorite": false
+      "cover": "https://m.media-amazon.com/images/I/81ZoTSNIinL._AC_UY218_.jpg",
+      "isFavorite": true
     },
     {
       "id": "4",
       "title": "Daughter Of No Worlds",
-      "author": "",
+      "author": "Carissa Broadbent",
       "synopsis": "",
       "category": "Romance",
-      "cover": "require('../../assets/images/books/daughter-of-no-worlds.png')",
+      "cover": "https://m.media-amazon.com/images/I/81KWv6ri2xL._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
       "id": "5",
       "title": "The Cursed And Desired",
-      "author": "",
+      "author": "G. Bailey",
       "synopsis": "",
       "category": "Romance",
-      "cover": "require('../../assets/images/books/the-cursed-and-desired.png')",
+      "cover": "https://m.media-amazon.com/images/I/91AP9jWXE5L._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
       "id": "6",
       "title": "The Invisible Man",
-      "author": "",
+      "author": "H. G. Wells",
       "synopsis": "",
       "category": "Romance",
-      "cover": "require('../../assets/images/books/the-invisible-man.png')",
+      "cover": "https://m.media-amazon.com/images/I/81xQKaS+VuL._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
       "id": "7",
       "title": "The Wager A Tale Of Shipwreck",
-      "author": "",
+      "author": "David Grann",
       "synopsis": "",
       "category": "Ação",
-      "cover": "require('../../assets/images/books/the-wager-a-tale-of-shipwreck.png')",
+      "cover": "https://m.media-amazon.com/images/I/91qXDU9TXvL._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
       "id": "8",
       "title": "Tales Of Horror",
-      "author": "",
-      "synopsis": "",
+      "author": "H. P. Lovecraft",
+      "synopsis": "As histórias de H. P. Lovecraft têm sido uma fonte de fascínio para os leitores desde que foram publicadas no início do século XX, e legiões de fãs continuam a reinventar seu mundo sombrio e fantástico até hoje. Esta coleção de contos do mestre do macabro contém mais de vinte de suas obras mais populares, incluindo O Chamado de Cthulhu, A Sombra sobre Innsmouth e O Horror de Dunwich.",
       "category": "Terror",
-      "cover": "require('../../assets/images/books/tales-of-horror.png')",
+      "cover": "https://m.media-amazon.com/images/I/81DQAJxsBnL._SY466_.jpg",
       "isFavorite": false
     },
     {
       "id": "9",
       "title": "Ghost Eaters",
-      "author": "",
+      "author": "Clay Chapman",
       "synopsis": "",
       "category": "Terror",
-      "cover": "require('../../assets/images/books/ghost-eaters.png')",
+      "cover": "https://m.media-amazon.com/images/I/81d0bHi6aaL._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
@@ -87,16 +87,16 @@
       "author": "Chugong",
       "synopsis": "Um fraco caçador de E-Rank, Sung Jin Woo. Ele quase encontra seu fim em uma masmorra, mas havia um lado bom no momento mais difícil!",
       "category": "Manhwa",
-      "cover": "require('../../assets/images/books/solo-leveling.png')",
+      "cover": "https://m.media-amazon.com/images/I/71La1GAIFFL._AC_UY218_.jpg",
       "isFavorite": false
     },
     {
       "id": "11",
-      "title": "The Beginning After The End",
+      "title": "The Beginning After The End ",
       "author": "TurtleMe (Brandon Lee)",
       "synopsis": "Segue a vida do falecido Rei Grey após sua morte prematura e misteriosa.",
       "category": "Manhwa",
-      "cover": "require('../../assets/images/books/the-beginning-after-the-end.png')",
+      "cover": "https://m.media-amazon.com/images/I/81FoJAa2vJL._SY342_.jpg",
       "isFavorite": false
     },
     {
@@ -105,7 +105,7 @@
       "author": "Jee Gab Song (지갑송)",
       "synopsis": "Um mundo que ele mesmo criou e uma história que escreveu, mas nunca terminou. Ele se tornou o figurante de seu romance, um personagem sem importância para a história.",
       "category": "Manhwa",
-      "cover": "require('../../assets/images/books/the-novels-extra.png')",
+      "cover": "https://img.lermanga.org/T/the-novels-extra/capa.jpg",
       "isFavorite": false
     },
     {
@@ -114,7 +114,7 @@
       "author": "",
       "synopsis": "Esta é uma história de um homem que se recusou a voltar ao passado quando todos os outros decidiram fazê-lo.",
       "category": "Manhwa",
-      "cover": "require('../../assets/images/books/the-world-after-the-end.png')",
+      "cover": "https://img.lermanga.org/T/the-world-after-the-end/capa.jpg",
       "isFavorite": false
     },
     {
@@ -123,25 +123,25 @@
       "author": "Geulsseunya",
       "synopsis": "Minha filha destruiu o mundo. No final da encruzilhada, morri desamparado. Quando abri os olhos novamente, vi minha filha de cinco anos na minha frente. Evite os cinco infortúnios de Seol-Ah Lee. (0/5) Chance dada mais uma vez. Se criada incorretamente, o mundo perecerá.",
       "category": "Manhwa",
-      "cover": "require('../../assets/images/books/my-daughter-is-the-final-boss.png')",
+      "cover": "https://static3.leitor.net/covers/-QHMEKVXM7M6h-AkDrZXIw/15077/62587920d8cbc_capa.jpg",
       "isFavorite": false
     },
     {
       "id": "15",
       "title": "Jack Mars Primary Threat",
-      "author": "",
+      "author": "Jack Mars ",
       "synopsis": "",
       "category": "Ação",
-      "cover": "require('../../assets/images/books/jack-mars-primary-threat.png')",
+      "cover": "https://m.media-amazon.com/images/I/81hzGQfXyjL._SY342_.jpg",
       "isFavorite": false
     },
     {
       "id": "16",
-      "title": "Man Hunt",
-      "author": "",
-      "synopsis": "",
-      "category": "Ação",
-      "cover": "require('../../assets/images/books/man-hunt.png')",
+      "title": "Manhunt",
+      "author": "Gretchen Felker-Martin",
+      "synopsis": "Beth e Fran passam seus dias viajando pela devastada costa da Nova Inglaterra, caçando homens selvagens e colhendo seus órgãos em um esforço horrível para garantir que nunca enfrentarão o mesmo destino. Robbie vive de sua arma e de um lema aprendido: outras pessoas não estão seguras. Depois de um acidente brutal envolvendo os três, essa família de sobreviventes precisa navegar por TERFs assassinos, um bunker bilionário sociopata e dinâmicas de relacionamento constrangedoras – tudo isso enquanto supera matilhas de homens selvagens e seus próprios demônios",
+      "category": "Horror",
+      "cover": "https://m.media-amazon.com/images/I/81urCTrYt2L._SY342_.jpg",
       "isFavorite": false
     }
   ]

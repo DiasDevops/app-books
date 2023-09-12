@@ -33,13 +33,13 @@ function NavBar() {
           size={36}
           color="gray.300"
           m={1}
-          onPress={() => navigation.navigate("collections")}
         />
         <Icon
           as={<Ionicons name="bookmark-outline" />}
           size={36}
           color="gray.300"
           m={1}
+          onPress={() => navigation.navigate("collections")}
         />
         <Icon
           as={<Ionicons name="settings-outline" />}
